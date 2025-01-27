@@ -2,7 +2,7 @@
 
 This project is a web application that updates a DNS record to the visitor's IP address using Cloudflare's API. The application is built using Flask and can be run inside a Docker container.
 
-# Usecase
+## Usecase
 I made this for updating a DNS record to a client to allow be able to allow a FQDN in my firewall to allow connections. 
 
 When I need to log in to my server I can visit a site to update the record to myself and then log in on my server.  
@@ -14,15 +14,13 @@ When I need to log in to my server I can visit a site to update the record to my
 ## Setup
 
 1. Clone the repository:
-    ```
-    sh
+    ```sh
     git clone <repository-url>
     cd <repository-directory>
     ```
 
 2. Create a .env file in the root directory of the project and add the following environment variables:
-    ```
-    env
+    ```env
     CLOUDFLARE_EMAIL=your_cloudflare_email
     CLOUDFLARE_API_KEY=your_cloudflare_api_key
     CLOUDFLARE_ZONE_ID=your_cloudflare_zone_id
@@ -37,34 +35,23 @@ When I need to log in to my server I can visit a site to update the record to my
 ### Using Docker
 
 1. Build the Docker image:
-    ```
-    sh
+    ```sh
     docker build -t dns_updater .
     ```
 
 2. Run the Docker container:
-    ```
-    sh
+    ```sh
     docker run -d -p 5000:5000 dns_updater
     ```
 
 ### Without Docker
 
 1. Install the required packages:
-    ```
-    sh
+    ```sh
     pip install -r requirements.txt
     ```
 
 2. Run the application:
-    ```
-    sh
+    ```sh
     python dns_updater.py
     ```
-
-## Usage
-
-1. Open your web browser and navigate to `http://localhost:5000`.
-2. Log in using the admin credentials specified in the .env
-3. The page will display the current DNS IP and your IP address.
-4. Click the "Update DNS Record with My IP" button to update the DNS record with your IP address.
