@@ -15,8 +15,8 @@ When I need to log in to my server I can visit a site to update the record to my
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/zerocool42/dns_updater/
+    cd dns_updater
     ```
 
 2. Create a .env file in the root directory of the project and add the following environment variables:
