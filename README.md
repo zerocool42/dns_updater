@@ -3,7 +3,7 @@
 This project is a web application that updates a DNS record to the visitor's IP address using Cloudflare's API. The application is built using Flask and can be run inside a Docker container.
 
 ## Usecase
-I made this for updating a DNS record to a client to allow be able to allow a FQDN in my firewall to allow connections. 
+I made this for updating a DNS record to a client to be able to allow a FQDN in my firewall to allow incoming connections. 
 
 When I need to log in to my server I can visit a site to update the record to myself and then log in on my server.  
 
