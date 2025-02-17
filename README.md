@@ -41,7 +41,7 @@ When I need to log in to my server I can visit a site to update the record to my
 
 2. Run the Docker container:
     ```sh
-    docker run -d -p 5000:5000 dns_updater
+    docker run -d --restart on-failure -p 5000:5000 dns_updater
     ```
 
 ### Without Docker
